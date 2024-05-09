@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Resources for Moving from Consulting to a Startup'
 pubDate: 2024-02-19
 description: 'Helpful resources for job searching, interviewing, and negotiating to move from consulting to startups
@@ -9,8 +10,6 @@ image:
     alt: 'The full Astro logo.'
 tags: ["startups"]
 ---
-
-# Resources for Moving from Consulting to a Startup
 
 Lots of people have written amazing resources on how to move from consulting into a startup role, as well as how to navigate important but often opaque topics like equity or reverse interviewing.
 

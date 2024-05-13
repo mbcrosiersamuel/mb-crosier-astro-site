@@ -13,16 +13,11 @@ const fontSize = "4rem";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-        <style define:vars={{fontSize}}>
-            h1 {
-              color: purple;
-              font-size: var(--fontSize);
-            }
-          </style>
 	</head>
 	<body>
-        <Header />
 		<h1>{pageTitle}</h1>
+        <Header />
+
         <slot />
 		<Footer />
 		<script>

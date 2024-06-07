@@ -12,4 +12,4 @@ tags: []
 
 Testing how photos work:
 
-![Bird](../../assets/bird.jpg)
+![Hi, it's me](../../assets/mb-headshot.jpg)

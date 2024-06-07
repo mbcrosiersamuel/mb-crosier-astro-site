@@ -2,9 +2,7 @@
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import HeaderImage from '../components/HeaderImage.astro';
-const fontSize = "4rem";
 ---
 
 <html lang="en">
@@ -14,11 +12,14 @@ const fontSize = "4rem";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<meta charset="utf-8" />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:site_name" content="MB Crosier" />
+
 	</head>
 	<body>
         <Header />
         <slot />
-		<Footer />
 		<script>
 			import "../scripts/menu.js"
 		</script>

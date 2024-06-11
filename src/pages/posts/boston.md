@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Boston Recommendations'
 pubDate: 2024-06-11
-description: 'MB's Boston recommendations, and a suggested weekend visit itinerary'
+description: 'Boston recommendations, and a suggested weekend visit itinerary'
 author: 'MB Crosier'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["travel"]
+tags: ["Travel"]
 ---
 
 # Boston Recommendations

@@ -7,7 +7,7 @@ image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
 pubDate: 2024-06-11
-tags: ["projects"]
+tags: ["Projects"]
 ---
 
 Recently, I built and launched [nycrsvps.com](https://wwww.nycrsvps.com), a very simple HTML/CSS/JS website that I built to make it easier to track and remember when reservations open at popular NYC restaurants. It has two main pages: a [data table](https://wwww.nycrsvps.com) with when reservations open at various restaurants, and [a calculator](https://www.nycrsvps.com/reservation-open-date-calculator) to help you anticipate when reservations open for a desired date and set a reminder to book.

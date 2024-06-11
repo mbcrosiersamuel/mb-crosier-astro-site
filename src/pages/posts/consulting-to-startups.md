@@ -8,7 +8,7 @@ author: 'MB Crosier'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["startups", "career"]
+tags: ["thoughts"]
 ---
 
 Lots of people have written amazing resources on how to move from consulting into a startup role, as well as how to navigate important but often opaque topics like equity or reverse interviewing.

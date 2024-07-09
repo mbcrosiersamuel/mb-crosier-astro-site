@@ -1,8 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Projects";
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(pageTitle));
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <p>Coming soon!</p>
-  <p>This will feature NYC RSVPs, my Connections analysis, and other things to come.</p>
+  <p>Fun description coming soon!</p>
+  <ul>
+		{filteredPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+	</ul>
 </BaseLayout>

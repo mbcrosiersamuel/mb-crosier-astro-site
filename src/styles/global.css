@@ -6,11 +6,34 @@ html {
 body {
   margin: 0 auto;
   width: 90%;
-  max-width: 600px;
+  font-size: 16px;
+  max-width: 550px;
   padding: 16px;
   line-height: 150%;
   min-height: 100vh;
   position: relative;
+  color: #28241C;
+  /*color: #0e1111;*/
+}
+
+
+h1 {
+  color: #05668D;
+  line-height: 120%;
+  font-size: 28px;
+}
+
+h2{
+  color: #028090;
+}
+
+h3{
+  color: #00A896;
+}
+
+hr.dotted {
+  border-top: 3px dotted #83c5be;
+  margin: 15px 15px;
 }
 
 * {

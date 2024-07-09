@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import linkedinIcon from '../assets/social-icons/linkedin.png';
+import twitterIcon from '../assets/social-icons/twitter.png';
+import githubIcon from '../assets/social-icons/github.png';
+const { src, ...attrs } = Astro.props;
+---
+<div class="footer">
+    <a href="mailto:mbcrosier@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i></a>
+    <a href="https://www.linkedin.com/in/maryboydcrosier" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    <a href="https://www.twitter.com/mb_crosier" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+    <a href="https://www.github.com/mbcrosier" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+</div>

@@ -5,39 +5,32 @@ html {
 
 body {
   margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
+  width: 90%;
+  max-width: 600px;
+  padding: 16px;
+  line-height: 150%;
+  min-height: 100vh;
+  position: relative;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 60px;
-  text-align: center;
-  padding: 0px 20px;
-  color: #05668D;
-  line-height: 30px;
-}
-
-img {
-  width: 80%;
-  height: auto;
-}
-
-
 /* nav styles */
+
+a{
+  color: #05668D;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
 .nav-links {
   display: inline-block;
   text-align: center;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
 }
 
 .nav-links a {
@@ -46,7 +39,8 @@ img {
   text-decoration: none;
   font-size: calc(15px + 0.5vw);
   font-weight: bold;
-  line-height: 15px;
+  line-height: 150%;
+  margin: 10px 10px;
 
 }
 
@@ -55,9 +49,32 @@ img {
   background-color: #F0F3BD;
 }
 
+/* footer styles */
 
-.yellowtail-regular {
-  font-family: "Yellowtail", cursive;
-  font-weight: 400;
-  font-style: normal;
+body::after {
+  content: '';
+  display: block;
+  height: 80px;
+  /* Set same as footer's height */
+}
+
+.footer {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  height: 80px;
+  bottom: 0;
+}
+
+.footer i {
+  color: #83c5be;
+  padding: 3px;
+}
+
+.footer i:hover,
+.footer i:focus {
+  color: #028090;
+
 }

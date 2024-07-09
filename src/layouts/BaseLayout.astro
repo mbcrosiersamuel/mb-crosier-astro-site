@@ -2,7 +2,8 @@
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
 import Header from '../components/Header.astro';
-import HeaderImage from '../components/HeaderImage.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -15,15 +16,20 @@ import HeaderImage from '../components/HeaderImage.astro';
 		<meta charset="utf-8" />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:site_name" content="MB Crosier" />
+		<!-- fonts and icons -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Yellowtail&display=swap" rel="stylesheet">
-
+        <script src="https://kit.fontawesome.com/1a310a18cd.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-        <Header />
+		<nav>
+			<Header />
+			<Navigation />
+	    </nav>
         <slot />
 		<script>
 		</script>
+		<Footer />
 	</body>
 </html>

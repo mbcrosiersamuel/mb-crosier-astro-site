@@ -7,7 +7,8 @@ author: 'MB Crosier'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["Thoughts"]
+type: 'Thoughts'
+tags: ["Startups"]
 ---
 
 Lots of people have written amazing resources on how to move from consulting into a startup role, as well as how to navigate important but often opaque topics like equity or reverse interviewing.
@@ -17,14 +18,14 @@ This is a compilation of some of my favorite resources that I found & used durin
 ## Start Here (Good Overviews)
 
 - [The Ultimate Guide to Finding a Startup Job](https://www.vinayiyengar.com/job-guide/) - Very tactical guide on how to identify and reach out to startups, questions to ask to diligence startups’ prospects, and how to think about comp
-- [How to Make the Leap from Consulting to a Startup](https://medium.com/future-vision/how-to-make-the-leap-from-consulting-to-a-startup-ee02fd80dbf7) - Guide by ex-Bainie Julia DeWahl (early at Opendoor). Covers learning about startups, interviewing and assessing them, and how to succeed on the job
+- [How to Make the Leap from Consulting to a Startup](https://www.medium.com/future-vision/how-to-make-the-leap-from-consulting-to-a-startup-ee02fd80dbf7) - Guide by ex-Bainie Julia DeWahl (early at Opendoor). Covers learning about startups, interviewing and assessing them, and how to succeed on the job
 
 ## Places to Look for Roles
 
 ### Job Boards
 
-- [Ali Rohde Jobs](https://alirohdejobs.substack.com/): Ops/CoS/Generalist/VC
-- [Extant Jobs](https://extantjobs.substack.com/): Ops/CoS/Generalist/VC
+- [Ali Rohde Jobs](https://www.alirohdejobs.substack.com/): Ops/CoS/Generalist/VC
+- [Extant Jobs](https://www.extantjobs.substack.com/): Ops/CoS/Generalist/VC
 - [Chief of Staff network](https://www.chiefofstaff.network/jobs): Chief of Staff/Ops
 - [Lenny’s Job Board](https://www.lennysjobs.com/): PM-specific
 
@@ -45,13 +46,13 @@ This is a compilation of some of my favorite resources that I found & used durin
 
 ## On Chief of Staff Roles, Specifically
 
-- [The Chief of Staff role in Silicon Valley](https://medium.com/chiefofstaffnetwork/the-chief-of-staff-role-in-silicon-valley-182eb93e636e): By Julia DeWahl, again 🙂. Overview of the role and FAQs for candidates/executives.
-- [Don’t Hire a Chief of Staff](https://nmoryl.com/dont-hire-a-chief-of-staff-b65c16d56eac): For contrast with Julia’s take.
+- [The Chief of Staff role in Silicon Valley](https://www.medium.com/chiefofstaffnetwork/the-chief-of-staff-role-in-silicon-valley-182eb93e636e): By Julia DeWahl, again 🙂. Overview of the role and FAQs for candidates/executives.
+- [Don’t Hire a Chief of Staff](https://www.nmoryl.com/dont-hire-a-chief-of-staff-b65c16d56eac): For contrast with Julia’s take.
 
 ## Evaluating a Company
 
 - [Reverse Interviewing](https://www.reforge.com/blog/reverse-interview): Your questions are the last impression you leave an interviewer with. This article has good tips for how to come prepared to make sure the role & team would set you up for success (and set yourself apart in the process).
-- [What To Ask in Interviews](https://posthog.com/founders/what-to-ask-in-interviews): Startups are risky. You can, and should, ask about PMF, Revenue/ARR, Runway. These questions impact your job stability, ask them upfront!
+- [What To Ask in Interviews](https://wwww.posthog.com/founders/what-to-ask-in-interviews): Startups are risky. You can, and should, ask about PMF, Revenue/ARR, Runway. These questions impact your job stability, ask them upfront!
 - [Tactical Company Building Lessons: Ask These Questions before Joining](https://review.firstround.com/23-tactical-company-building-lessons-learned-from-scaling-stripe-and-notion#3-ask-these-questions-before-joining-a-startup): TL;DR, do you believe in the founders and their passion/vision?
 - [Also ask about comp upfront to set expectations & safe yourself - and them - time if expectations are misaligned]
 
@@ -59,14 +60,14 @@ This is a compilation of some of my favorite resources that I found & used durin
 
 ### Comp
 
-- Several of the previously shared resources include compensation resources - specifically [Omna](https://www.omnasearch.com/2022-startup-compensation-guide), [Golden Gate](https://goldengaterecruits.substack.com/), and [Vinay Ingeyar](https://www.vinayiyengar.com/job-guide/) (via OptionImpact)
-    - Other websites like [levels.fyi](http://levels.fyi) and Glassdoor put out some comp data for free, but coverage of Ops / CoS type jobs varies
+- Several of the previously shared resources include compensation resources - specifically [Omna](https://www.omnasearch.com/2022-startup-compensation-guide), [Golden Gate](https://www.goldengaterecruits.substack.com/), and [Vinay Ingeyar](https://www.vinayiyengar.com/job-guide/) (via OptionImpact)
+    - Other websites like [levels.fyi](http://www.levels.fyi) and Glassdoor put out some comp data for free, but coverage of Ops / CoS type jobs varies
 
 ### Equity
 
 - [Equity for Software Engineers](https://blog.pragmaticengineer.com/equity-for-software-engineers/): Super comprehensive, and engineers aren’t the only ones who need this info!
-- [Stripe’s Equity Guide](https://stripe.com/guides/equity-for-employees): While this is written for founders, it’s clearly written and a helpful guide for heuristics (e.g. equity %s to grant by role) as well as to understand second-level concepts like ISOs vs. NSOs. Maybe not necessary upfront, but helpful down the line.
+- [Stripe’s Equity Guide](https://www.stripe.com/guides/equity-for-employees): While this is written for founders, it’s clearly written and a helpful guide for heuristics (e.g. equity %s to grant by role) as well as to understand second-level concepts like ISOs vs. NSOs. Maybe not necessary upfront, but helpful down the line.
 
 ## Succeeding Once You're There
-- [How to Make the Leap from Consulting to a Startup](https://medium.com/future-vision/how-to-make-the-leap-from-consulting-to-a-startup-ee02fd80dbf7): Yes, I linked this at the top also, but it has great content on this topic! 
+- [How to Make the Leap from Consulting to a Startup](https://www.medium.com/future-vision/how-to-make-the-leap-from-consulting-to-a-startup-ee02fd80dbf7): Yes, I linked this at the top also, but it has great content on this topic! 
 - [Tactical Company Building Lessons: Taking Charge of Your Startup Career](https://review.firstround.com/23-tactical-company-building-lessons-learned-from-scaling-stripe-and-notion#taking-charge-of-your-startup-career): Another repeat, but also contains good tactical advice around leaning into the product and filling gaps on the job

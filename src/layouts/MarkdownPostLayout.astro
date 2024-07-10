@@ -1,19 +1,40 @@
 ---
 const { frontmatter } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
+
+// Parse the date string into a Date object
+const pubDate = new Date(frontmatter.pubDate);
+
+// Format the date
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).format(pubDate);
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>Published: {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <h1>{frontmatter.title}</h1>
+    <h3>{frontmatter.description}</h3>
+    <p class="post-date">{formattedDate}</p>
+    <!---
+
+    Uncomment this to bring back tags
+
     <div class="tags">
         {frontmatter.tags.map((tag) => (
           <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
         ))}
-      </div>
+      </div> 
+      -->
     <slot />
 </BaseLayout>
 <style>
     a {
       color: #00539F;
+    }
+
+    h1{
+      margin-bottom: 6px;
     }
   
     .tags {
@@ -22,12 +43,22 @@ import BaseLayout from "./BaseLayout.astro";
     }
   
     .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
+      margin: 4px 4px 4px 0px;
+      border: dotted 1px #83c5be;
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: 16px;
+      background-color: #F0F3BD;
+    }
+
+    h3{
+      font-size: 16px;
+      margin: 0px;
+    }
+
+    .post-date{
+      font-weight: bold;
+      margin: 6px 0px;
     }
     
   </style>

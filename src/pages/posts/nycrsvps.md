@@ -7,7 +7,8 @@ image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
 pubDate: 2024-06-11
-tags: ["Projects"]
+type: 'Projects'
+tags: ["NYC"]
 ---
 
 Recently, I built and launched [nycrsvps.com](https://wwww.nycrsvps.com), a very simple HTML/CSS/JS website that I built to make it easier to track and remember when reservations open at popular NYC restaurants. It has two main pages: a [data table](https://wwww.nycrsvps.com) with when reservations open at various restaurants, and [a calculator](https://www.nycrsvps.com/reservation-open-date-calculator) to help you anticipate when reservations open for a desired date and set a reminder to book.
@@ -22,7 +23,7 @@ I wrote a bit about my takeaways from conceptualizing, creating, and launching [
 
 I minored in computer science and work for a developer tools startup that leverages open source projects in our own project, and sponsors open source projects that further the ecosystem. 
 
-I know, on paper, the value of open source. I laugh, knowingly, at the [classic xkcd meme](https://xkcd.com/2347/).
+I know, on paper, the value of open source. I laugh, knowingly, at the [classic xkcd meme](https://www.xkcd.com/2347/).
 
 But wow, the process of building this genuinely tiny website (two pages, raw HTML + JS + CSS, no frameworks) made the criticality of open source sink in.
 

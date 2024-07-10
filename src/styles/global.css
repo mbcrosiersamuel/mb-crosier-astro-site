@@ -6,11 +6,34 @@ html {
 body {
   margin: 0 auto;
   width: 90%;
-  max-width: 600px;
+  font-size: 16px;
+  max-width: 700px;
   padding: 16px;
   line-height: 150%;
   min-height: 100vh;
   position: relative;
+  color: #28241C;
+  /*color: #0e1111;*/
+}
+
+
+h1 {
+  color: #05668D;
+  line-height: 120%;
+  font-size: 28px;
+}
+
+h2{
+  color: #028090;
+}
+
+h3{
+  color: #00A896;
+}
+
+hr.dotted {
+  border-top: 3px dotted #83c5be;
+  margin: 15px 15px;
 }
 
 * {
@@ -30,7 +53,7 @@ a{
   display: inline-block;
   text-align: center;
   width: 100%;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 20px 10px;
 }
 
 .nav-links a {
@@ -77,4 +100,8 @@ body::after {
 .footer i:focus {
   color: #028090;
 
+}
+
+li{
+  padding: 3px 0px;
 }

@@ -5,7 +5,8 @@ const { src, ...attrs } = Astro.props;
 ---
 <div>
         <Image src={mbHeadshot} alt="Headshot of MB Crosier" />
-      <h1>MB Crosier</h1>
+        <a href="/"><h1>MB Crosier</h1></a>
+
 </div>
 
 <style>
@@ -13,7 +14,7 @@ const { src, ...attrs } = Astro.props;
     border-radius: calc(40px + 5vw);
     width: calc(40px + 5vw);
     height: calc(40px + 5vw);
-    margin: 0px 10px;
+    margin-right: 10px;
     --main-bg-color: #83c5be;
     background-color: var(--main-bg-color); /* to do: make random color generation */ 
   }
@@ -25,17 +26,21 @@ const { src, ...attrs } = Astro.props;
   h1{
     font-size:calc(30px + 3vw);
     font-family: "Yellowtail", cursive;
-    padding: 0px 10px;
     color: #05668D;
-    margin: 16px 0;
+    margin: 0px 10px 0px 10px;
     line-height: 100%;
-
   }
+
+  h1:hover{
+    color: #83c5be;
+  }
+
+
   div{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 20px;
+   margin: 20px 0px;
   }
 
 </style>

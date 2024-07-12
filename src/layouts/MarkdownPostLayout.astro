@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
+import Aside from '../components/Aside.astro';
 
 // Parse the date string into a Date object
 const pubDate = new Date(frontmatter.pubDate);
@@ -13,9 +14,11 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 }).format(pubDate);
 ---
 <BaseLayout pageTitle={frontmatter.title}>
+    <br>
     <h1>{frontmatter.title}</h1>
-    <h3>{frontmatter.description}</h3>
-    <p class="post-date">{formattedDate}</p>
+    <h3>{formattedDate}</h3>
+    <hr class="dotted">
+
     <!---
 
     Uncomment this to bring back tags
@@ -31,6 +34,10 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 <style>
     a {
       color: #00539F;
+    }
+
+    h1, h3 {
+      text-align: center;
     }
 
     h1{
@@ -57,8 +64,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
     }
 
     .post-date{
-      font-weight: bold;
-      margin: 6px 0px;
+      color: #28241C;
     }
     
   </style>

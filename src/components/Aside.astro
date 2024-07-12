@@ -1,0 +1,32 @@
+---
+const { type = 'info' } = Astro.props;
+---
+
+<aside class={`global-aside ${type}`}>
+  <slot />
+</aside>
+
+<style is:global>
+  .global-aside {
+    border: 1px solid lightgray;
+    border-left: 4px solid;
+    padding: 6px 16px;
+    margin: 6px 0;
+  }
+
+  .global-aside.info {
+    background-color: #E8F3F8;
+    border-left-color: #05668D;
+
+  }
+
+  .global-aside.warning {
+    background-color: #fdf7e8;
+    border-left-color: #f39c12;
+  }
+
+  .global-aside.danger {
+    background-color: #fde8e8;
+    border-left-color: #e74c3c;
+  }
+</style>

@@ -4,16 +4,25 @@ title: Building NYCRSVPs.com
 author: MB Crosier
 description: "Writing about the process & learnings from building nycrsvps.com"
 image:
-    url: "https://docs.astro.build/assets/rays.webp"
-    alt: "Thumbnail of Astro rays."
+    url: "../../assets/NYCRSVPs-homepage.png"
+    alt: "Homepage of NYC RSVPs website."
 pubDate: 2024-06-11
 type: 'Projects'
 tags: ["NYC"]
 ---
+import { Image } from 'astro:assets';
+import homepage from '../../assets/NYCRSVPs-homepage.png';
+import datecalc from '../../assets/NYCRSVPs-calculator.png';
 
-Recently, I built and launched [nycrsvps.com](https://wwww.nycrsvps.com), a very simple HTML/CSS/JS website that I built to make it easier to track and remember when reservations open at popular NYC restaurants. It has two main pages: a [data table](https://wwww.nycrsvps.com) with when reservations open at various restaurants, and [a calculator](https://www.nycrsvps.com/reservation-open-date-calculator) to help you anticipate when reservations open for a desired date and set a reminder to book.
 
-<image of site>
+
+Recently, I built and launched [nycrsvps.com](https://www.nycrsvps.com), a very simple HTML/CSS/JS website that I built to make it easier to track and remember when reservations open at popular NYC restaurants. 
+
+<a href="https://www.nycrsvps.com" target="_blank" rel="noopener noreferrer"><Image src={homepage} alt="Image of nycrsvps.com homepage." /></a>
+
+It has two main pages: a [data table](https://wwww.nycrsvps.com) with when reservations open at various restaurants (shown above), and [a calculator](https://www.nycrsvps.com/reservation-open-date-calculator) to help you anticipate when reservations open for a desired date and set a reminder to book.
+
+<a href="https://www.nycrsvps.com/reservation-open-date-calculator" target="_blank" rel="noopener noreferrer"><Image src={datecalc} alt="Image of the nycrsvps.com reservation open date calculator." /></a>
 
 This was a fun side project that both helped me pick up some new web dev skills and helped me snag some reservations that I had been trying to make for a long time - in particular, Lilia and Raoul’s. 
 
@@ -23,13 +32,15 @@ I wrote a bit about my takeaways from conceptualizing, creating, and launching [
 
 I minored in computer science and work for a developer tools startup that leverages open source projects in our own project, and sponsors open source projects that further the ecosystem. 
 
-I know, on paper, the value of open source. I laugh, knowingly, at the [classic xkcd meme](https://www.xkcd.com/2347/).
+I know, on paper, the value of open source. I laugh, knowingly, at the <a href="https://www.xkcd.com/2347/" target="_blank" rel="noopener noreferrer">classic xkcd meme</a>:
+
+![XKCD meme showing the world's dependence on open source](https://imgs.xkcd.com/comics/dependency.png)
 
 But wow, the process of building this genuinely tiny website (two pages, raw HTML + JS + CSS, no frameworks) made the criticality of open source sink in.
 
 - **Need to work with tables in HTML?** Good luck, they’re super limited. I ended up using Tabulator, run by Oli Folkerd.
-- **Want to manipulate and format dates in JavaScript?** The Date object probably isn’t going to cut it. Luxon, maintained by x, is way better.
-- **Hoping to offer scheduling?** There’s a native date picker, that doesn’t do much. Try Add-to-Calendar, maintained by x, to make that easier.
+- **Want to manipulate and format dates in JavaScript?** The Date object probably isn’t going to cut it. Luxon, which has [a handful of active maintainers](https://github.com/moment), including Isaac Cambron, is way better.
+- **Hoping to offer scheduling?** There’s a native date picker, that doesn’t do much. Try Add-to-Calendar-Button, maintained by Jens Kuerschner, to make that easier.
 
 Could I have built this functionality by scratch? Maybe, but it would have taken me much, much, longer. But my total project cost was only the $12 domain, because these humans generously offered up their time and talents, so that I could do in minutes what is otherwise immensely challenging.
 
@@ -65,11 +76,11 @@ But when I shared it anonymously on Reddit, people were really encouraging! And 
 
 Overall, I was happy with the outcomes of my Reddit launch, with the post seeing >15K views, and >1K unique visitors checking out the site. But what was cooler was getting to watch the project grow organically as more people found it and as it got more SEO traction with Google. Here’s the latest visitor chart:
 
-<to add>
+![Image of nycrsvps.com weekly active users over the last 90 days, showing ~300 or so users per week](../../assets/NYCRSVPs-WAUs-last-90-days.png)
 
 Some people bounce immediately, but other people use it more like I do - staying for 5, 10, 15 minutes at a time to schedule a bunch of reminders to snag reservations over the next few months. So that’s pretty cool. And I even got my first user input (which, fortunately, was easy to implement, too:
 
-<pic of email>
+![An email requesting a new restaurant be added to nycrsvps.com](../../assets/NYCRSVPs-update-request.png)
 
 ### Now what?
 

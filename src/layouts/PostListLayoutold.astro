@@ -1,0 +1,31 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const { pageTitle } = Astro.props;
+const allPosts = await Astro.glob('../pages/posts/*.mdx');
+const filteredPosts = allPosts.filter((post) => post.frontmatter.type === pageTitle);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <span class="intro-blurb">
+        <h1>{pageTitle}</h1>
+        <p><slot /></p>
+    </span>
+    <hr class="dotted">
+	{filteredPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} />)}
+</BaseLayout>
+
+<style>
+    .intro-blurb{
+        text-align: center;
+    }
+
+    h1{
+        margin-bottom: 3px;
+    }
+
+    p{
+        margin-top: 3px;
+    }
+
+</style>

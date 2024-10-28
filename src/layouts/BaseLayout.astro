@@ -28,7 +28,9 @@ import Footer from '../components/Footer.astro';
 			<Navigation />
 	    </nav>
         <slot />
-		<script>
+		<script async>
+			import { inject } from "@vercel/analytics";
+			inject()
 		</script>
 		<Footer />
 	</body>

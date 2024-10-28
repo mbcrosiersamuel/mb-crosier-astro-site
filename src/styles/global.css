@@ -46,6 +46,7 @@ a{
   color: #05668D;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
 }
 
 
@@ -70,7 +71,7 @@ a{
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: #F0F3BD;
-}
+} 
 
 /* footer styles */
 

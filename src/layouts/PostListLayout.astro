@@ -1,31 +1,46 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from "./BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 const { pageTitle } = Astro.props;
-const allPosts = await Astro.glob('../pages/posts/*.mdx');
-const filteredPosts = allPosts.filter((post) => post.frontmatter.type === pageTitle);
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+const filteredPosts = allPosts.filter(
+    (post) => post.frontmatter.type === pageTitle).sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <span class="intro-blurb">
-        <h1>{pageTitle}</h1>
-        <p><slot /></p>
+        <br />
+        <div>
+            <i>
+                This section is dedicated to resources, notes & reflections on
+                things I've learned about, topics I find interesting, or
+                resources I want to reference later. It's also a work in progress!</i
+            >
+        </div>
     </span>
-    <hr class="dotted">
-	{filteredPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} />)}
+    <br />
+    <br />
+    {
+        filteredPosts.map((post) => (
+            <BlogPost
+                url={post.url}
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+            />
+        ))
+    }
 </BaseLayout>
 
 <style>
-    .intro-blurb{
+    .intro-blurb {
         text-align: center;
     }
 
-    h1{
+    h1 {
         margin-bottom: 3px;
     }
 
-    p{
+    p {
         margin-top: 3px;
     }
-
 </style>

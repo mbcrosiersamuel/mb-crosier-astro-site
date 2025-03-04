@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'AI Search Optimization'
 pubDate: 2025-03-03
-description: 'Learnings on the current state of AI search optimization (or generative engine optimization, depending on who you ask).'
+description: 'A comprehensive guide to AI search optimization (GEO), covering how AI-driven search is changing content discovery, key optimization strategies, and tools for measuring success.'
 author: 'MB Crosier'
 image:
     url: '../../assets/abstract-swirl.png'
@@ -14,15 +14,15 @@ tags: ["Startups"]
 import Tweet from '../../components/Tweet.astro';
 import LinkedIn from '../../components/LinkedIn.astro';
 
-I still remember the first time a user typed ChatGPT into our company's “How did you hear about us?” field in our signup form. When I saw that response, I surprised, but also excited - this was a new opportunity that we hadn't yet started to consider.
+I still remember the first time a user typed ChatGPT into our company's "How did you hear about us?" field in our signup form. When I saw that response, I surprised, but also excited - this was a new opportunity that we hadn't yet started to consider.
 
 And almost overnight, that user stopped being the exception. People are starting to see charts like this, and ask the same questions: Organic ChatGPT referrals are great, but how do we get more of them?
 
 <Tweet id="1892947603274293411" />
 
-It's clearer than ever that AI-driven search is changing how content gets discovered. SEO still matters, but so does optimizing for AI-generated search overviews (like Google’s AI Overviews) and AI-native search engines (like ChatGPT Search and Perplexity).
+It's clearer than ever that AI-driven search is changing how content gets discovered. SEO still matters, but so does optimizing for AI-generated search overviews (like Google's AI Overviews) and AI-native search engines (like ChatGPT Search and Perplexity).
 
-This field is still 'unsolved' and a black box—there’s no standard 'AI Search Optimization' playbook, and we don’t even have a consistent name for the field yet. But after doing quite a bit of research, I wanted to summarize what I’ve learned so far.
+This field is still 'unsolved' and a black box—there's no standard 'AI Search Optimization' playbook, and we don't even have a consistent name for the field yet. But after doing quite a bit of research, I wanted to summarize what I've learned so far.
 ## First, the name issue - what should we call AI Search Optimization?
 
 SEO (Search Engine Optimization) is now such a mature field that its practitioners even refer to themselves as 'SEOs.' GenAI Search Optimization, on the other hand, is so new that everyone is calling it something different. These names include, but are not limited to:
@@ -74,7 +74,7 @@ This entire spaces is a black box, and but there have been lots of interesting c
 - **Being the top result matters less.** Humans almost always click on the top search result. AI doesn't act the same way; the top 10 results on Google aren't necessarily the ones AI overviews pull from ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo)).  AI overviews synthesize multiple pages, and put heavy weight on sources like Youtube, Wikipedia, and LinkedIn, which offer user generated content.
 - **Good traditional SEO is still important.** Google's AI Overviews [patent](https://patents.google.com/patent/US11769017B1/en) hints at how their process works. The patent references using content from 'Search-result documents' as a key input, so clearly SEO still matters. AI-generated responses use multiple signals beyond just page ranking—things like recency, semantic relevance, and how often a source is linked elsewhere ([Advanced Web Ranking](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs)).
 - **On Google, AI Overviews are most common for informational queries.** Google's AI overviews ('Search Generative Experience') results are most common for informational keywords, across a mix of low-volume and more general queries. ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo), [Semrush](https://www.semrush.com/blog/ai-overviews-study/))
-- **Don't forget about Bing.** ChatGPT search specifically [uses Bing](https://techcrunch.com/2023/06/27/openais-chatgpt-app-can-now-search-the-web-but-only-via-bing) and is believed to pull the top [~10-15 results](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3) , to then synthesize into an overview summary. (I can’t find an original source on the ‘top 10-15 results’ claim, but have seen it lots of places; if anyone knows where that claim comes from originally, would love to know).
+- **Don't forget about Bing.** ChatGPT search specifically [uses Bing](https://techcrunch.com/2023/06/27/openais-chatgpt-app-can-now-search-the-web-but-only-via-bing) and is believed to pull the top [~10-15 results](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3) , to then synthesize into an overview summary. (I can't find an original source on the 'top 10-15 results' claim, but have seen it lots of places; if anyone knows where that claim comes from originally, would love to know).
 
 ### **How Can You Influence AI Search Results?**
 

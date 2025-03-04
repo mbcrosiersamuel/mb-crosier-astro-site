@@ -11,8 +11,28 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
   month: 'long',
   day: 'numeric'
 }).format(pubDate);
+
+// Create the JSON-LD structured data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": frontmatter.title,
+  "description": frontmatter.description,
+  "image": frontmatter.image?.url ? new URL(frontmatter.image.url, Astro.site) : null,
+  "datePublished": frontmatter.pubDate,
+  "author": {
+    "@type": "Person",
+    "name": frontmatter.author
+  }
+};
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout 
+  pageTitle={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  type="article"
+>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <article class="blog-post">
         <header>
             <h1>{frontmatter.title}</h1>

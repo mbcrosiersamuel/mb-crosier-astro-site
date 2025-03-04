@@ -12,4 +12,6 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  site: 'https://mbcrosier.com',
+  sitemap: true,
 });

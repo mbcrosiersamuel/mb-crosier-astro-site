@@ -21,6 +21,10 @@ const finalImage = image ? {
 const imageUrl = finalImage.url.startsWith('http') 
   ? finalImage.url 
   : `${import.meta.env.SITE || 'https://mbcrosier.com'}${finalImage.url}`;
+
+// Add image dimensions - adjust these based on your actual image sizes
+const imageWidth = 1200;  // recommended width
+const imageHeight = 630;  // recommended height for 1.91:1 aspect ratio
 ---
 
 <html lang="en">
@@ -41,6 +45,12 @@ const imageUrl = finalImage.url.startsWith('http')
 		{description && <meta property="og:description" content={description} />}
 		<meta property="og:image" content={imageUrl} />
 		<meta property="og:image:alt" content={finalImage.alt} />
+		<meta property="og:image:width" content={imageWidth} />
+		<meta property="og:image:height" content={imageHeight} />
+
+		<!-- Apple/iMessage specific -->
+		<meta name="apple-mobile-web-app-title" content={pageTitle} />
+		<meta property="og:image:type" content="image/png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />

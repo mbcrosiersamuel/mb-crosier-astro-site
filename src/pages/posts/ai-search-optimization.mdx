@@ -11,39 +11,43 @@ type: 'Posts'
 tags: ["Startups"]
 ---
 
-In my last marketing job, we asked users to answer ‘How did you hear about us?’ on signup. We had a dropdown, but there was an ‘Other’ write-in option, too. I remember **SO** clearly the first time that a user wrote ‘ChatGPT’ into our signup form. I was floored, and surprised, but also excited.
+import Tweet from '../../components/Tweet.astro';
+import LinkedIn from '../../components/LinkedIn.astro';
 
-And almost overnight, that user stopped being the exception. And pretty soon, we had to edit our dropdown.
+I still remember the first time a user typed ChatGPT into our company's “How did you hear about us?” field in our signup form. When I saw that response, I surprised, but also excited - this was a new opportunity that we hadn't yet started to consider.
 
-Now, more than a year later, it’s clearer than ever that AI-driven search is shifting how content gets discovered. SEO playbooks still matter a lot, but so, too, does optimizing for appearance in  AI-generated search overviews (like Google’s AI Overviews) and in search results from AI-native Chat engines (like ChatGPT Search and Perplexity).
+And almost overnight, that user stopped being the exception. People are starting to see charts like this, and ask the same questions: Organic ChatGPT referrals are great, but how do we get more of them?
 
-This topic is very much “unsolved” — lots of how GenAI search works is still a black box, and the field doesn’t even yet have a consistent name. But I’ve learned a lot from my research, so wanted to summarize the current state of the world (as I understand it!). 
+<Tweet id="1892947603274293411" />
 
+It's clearer than ever that AI-driven search is changing how content gets discovered. SEO still matters, but so does optimizing for AI-generated search overviews (like Google’s AI Overviews) and AI-native search engines (like ChatGPT Search and Perplexity).
+
+This field is still 'unsolved' and a black box—there’s no standard 'AI Search Optimization' playbook, and we don’t even have a consistent name for the field yet. But after doing quite a bit of research, I wanted to summarize what I’ve learned so far.
 ## First, the name issue - what should we call AI Search Optimization?
 
-SEO (Search Engine Optimization) is now such a mature field that its practitioners even refer to themselves as ‘SEOs.’ GenAI Search Optimization, on the other hand, is so new that everyone is calling it something different. These names include, but are not limited to:
+SEO (Search Engine Optimization) is now such a mature field that its practitioners even refer to themselves as 'SEOs.' GenAI Search Optimization, on the other hand, is so new that everyone is calling it something different. These names include, but are not limited to:
 
-- **GEO (Generative Engine Optimization)** – The most popular name I’ve seen
-- **SGE (’Search Generative Experience’) / AI Overviews** – Google's terms for their AI-generated search summaries.
-- **LMO (Language Model Optimization)** – [HubSpot](https://www.hubspot.com/company-news/from-seo-to-lmo-hubspot-launches-the-first-free-tool-for-ai-discovery)’s chosen abbreviation / term
-- **GAIO (Generative AI Optimization)** - I think this one’s weird, but some people are trying to make it happen 🤷‍♀️
+- **GEO (Generative Engine Optimization)** – The most popular name I've seen
+- **SGE ('Search Generative Experience') / AI Overviews** – Google's terms for their AI-generated search summaries.
+- **LMO (Language Model Optimization)** – [HubSpot](https://www.hubspot.com/company-news/from-seo-to-lmo-hubspot-launches-the-first-free-tool-for-ai-discovery)'s chosen abbreviation / term
+- **GAIO (Generative AI Optimization)** - I think this one's weird, but some people are trying to make it happen 🤷‍♀️
 
-Other people just call it ‘AI Search’, so I’ll use that for now. My bet is that the ultimate winner will be ‘GEO’, which is both broadly inclusive and easy to pronounce. But we’ll see!
+Other people just call it 'AI Search', so I'll use that for now. My bet is that the ultimate winner will be 'GEO', which is both broadly inclusive and easy to pronounce. But we'll see!
 
 ## AI Search Optimization: A Two-Layered Problem
 
 To succeed in AI search, you ideally need to be successful in two ways:
 
-1. **Inclusion in Foundation Models:** First, your brand needs to be included in the AI model’s training data - ideally repeatedly, in a positive light, and in contexts that include relevant phrases and keywords for your topic
+1. **Inclusion in Foundation Models:** First, your brand needs to be included in the AI model's training data - ideally repeatedly, in a positive light, and in contexts that include relevant phrases and keywords for your topic
 2. **Inclusion in Web Search:** Second, when AI searches pull in real-time web data, you want to ideally appear in multiple of the top ~10-15 search results, which may not just be your own site - but also across other top results, particularly sites like Wikipedia and YouTube that are heavily weighted as trusted sources.
 
-This is an oversimplification, and there are lots of differences and nuances across different models, different AI tools, etc.. I’ll explain some of these in more details below.
+This is an oversimplification, and there are lots of differences and nuances across different models, different AI tools, etc.. I'll explain some of these in more details below.
 
 ### Inclusion in Foundation Models
 
-My favorite read on this topic is from [Advanced Web Rankings](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs), who offers a nice breakdown of how to think about getting your content included in LLM training data. This is important, because not every user selects ‘Search’ on ChatGPT, or uses a tool like Perplexity; in most scenarios where users are consulting AI Models, whether in a chat interface or via the API, they’re relying on the original corpus of data that the LLM was trained on. 
+My favorite read on this topic is from [Advanced Web Rankings](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs), who offers a nice breakdown of how to think about getting your content included in LLM training data. This is important, because not every user selects 'Search' on ChatGPT, or uses a tool like Perplexity; in most scenarios where users are consulting AI Models, whether in a chat interface or via the API, they're relying on the original corpus of data that the LLM was trained on. 
 
-Because of that, it’s advantageous to act now to maximize your appearance in the sources that new LLMs are being trained on. 
+Because of that, it's advantageous to act now to maximize your appearance in the sources that new LLMs are being trained on. 
 
  For example, as [Advanced Web Rankings breaks down on their blog](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs), GPT-3 is trained on a mix of the Common Crawl (basically any popular websites), WebText2 (outbound links on Reddit posts with > 3 upvotes), Wikipedia, and books. 
 
@@ -51,15 +55,13 @@ As a result, helpful ways to optimize for inclusion in foundation models might b
 
 - Having an active Reddit marketing strategy, where your community or support team engage positively and constructively with users, or you post value added content in relevant subreddits
 - Ensuring your brand has a presence on Wikipedia. Do this with caution (Wikipedia editors see straight through blatant marketing).
-    - For example, when I worked a bit on this for my previous company, Stytch, I didn’t add a full Wikipedia page for them (that would be too much!), but I did add them to a few relevant lists and databases (like [this one of startup unicorns](https://en.wikipedia.org/w/index.php?title=List_of_unicorn_startup_companies&diff=prev&oldid=1197284120)) so that the company was referenced more often on the site.
-- Other early GEO practicioners advocate for intentional ‘co-occurence’ — ensuring your brand is regularly mentioned using the specific phrases and long-tail keywords that you want your brand to appear alongside. This video from Rand Fishkin is a good overview of this strategy (thanks to Jeff Everhart in the devmarketing slack for sharing this!):
-    
-    https://x.com/randfish/status/1886866528731283560
+    - For example, when I worked a bit on this for my previous company, Stytch, I didn't add a full Wikipedia page for them (that would be too much!), but I did add them to a few relevant lists and databases (like [this one of startup unicorns](https://en.wikipedia.org/w/index.php?title=List_of_unicorn_startup_companies&diff=prev&oldid=1197284120)) so that the company was referenced more often on the site.
+- Other early GEO practicioners advocate for intentional 'co-occurence' — ensuring your brand is regularly mentioned using the specific phrases and long-tail keywords that you want your brand to appear alongside. This video from Rand Fishkin is a good overview of this strategy (thanks to Jeff Everhart in the devmarketing slack for sharing this!): <Tweet id="1886866528731283560" />
     
 
-To summarize, it’s not fully clearly how different foundation models are changed, and which sources are weighted heavily is likely to change and evolve over time. 
+To summarize, it's not fully clear how different foundation models are trained, and which sources are weighted heavily is likely to change and evolve over time. 
 
-However, in general, more positive appearances for your company across popular web sources - especially user-generated content sites — is helpful to increase your brand’s visibility in LLM-generated content (if you’re able to establish your presence before the model is trained).
+However, in general, more positive appearances for your company across popular web sources — especially user-generated content sites — is helpful to increase your brand's visibility in LLM-generated content (if you're able to establish your presence before the model is trained).
 
 ## Inclusion in Web Search
 
@@ -69,56 +71,58 @@ In practice, companies typically start by using a web search API call to pull to
 
 This entire spaces is a black box, and but there have been lots of interesting conjecture about what makes it into AI Overviews. Here are a few key themes in what people believe:
 
-- **Being the top result matters less.** Humans almost always click on the top search result. AI doesn’t act the same way; the top 10 results on Google aren’t necessarily the ones AI overviews pull from ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo)).  AI overviews synthesize multiple pages, and put heavy weight on sources like Youtube, Wikipedia, and LinkedIn, which offer user generated content.
-- **Good traditional SEO is still important.** Google’s AI Overviews [patent](https://patents.google.com/patent/US11769017B1/en) hints at how their process works. The patent references using content from ‘Search-result documents’ as a key input, so clearly SEO still matters. AI-generated responses use multiple signals beyond just page ranking—things like recency, semantic relevance, and how often a source is linked elsewhere (h/t [Advanced Web Ranking](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs)).
-- **On Google, AI Overviews are most common for informational queries.** Google's AI overviews (’Search Generative Experience’) results are most common for informational keywords, across a mix of low-volume and more general queries. ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo), [Semrush](https://www.semrush.com/blog/ai-overviews-study/))
-- **Don’t forget about Bing.** ChatGPT search specifically [uses Bing](https://techcrunch.com/2023/06/27/openais-chatgpt-app-can-now-search-the-web-but-only-via-bing/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAEf4tGfUR6hebNvrUCUTGrwWKIlKw60Iz3NhlxAni7YpgWYJDmzBJ1B8-P8tog7KqWEDEbcCtjZq4t1MuBrCWBzktANBucMBnJMdhTk2XBlJyAuPIU_theLEj53ZSmFZG04d23Vya0QauueSHKee85xC1UEv_YykYxOxa06mpQlk) and is believed to pull the top [~10-15 results](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3?utm_source=share&utm_medium=member_desktop&rcm=ACoAABvwGecBGy-5hL7k_lsLs4UK_cTDRKHHnFA), to then synthesize into an overview summary. (I can’t find an original source on the ‘top 10-15 results’ claim, but have seen it lots of places; if anyone knows where that claim comes from originally, would love to know).
+- **Being the top result matters less.** Humans almost always click on the top search result. AI doesn't act the same way; the top 10 results on Google aren't necessarily the ones AI overviews pull from ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo)).  AI overviews synthesize multiple pages, and put heavy weight on sources like Youtube, Wikipedia, and LinkedIn, which offer user generated content.
+- **Good traditional SEO is still important.** Google's AI Overviews [patent](https://patents.google.com/patent/US11769017B1/en) hints at how their process works. The patent references using content from 'Search-result documents' as a key input, so clearly SEO still matters. AI-generated responses use multiple signals beyond just page ranking—things like recency, semantic relevance, and how often a source is linked elsewhere ([Advanced Web Ranking](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs)).
+- **On Google, AI Overviews are most common for informational queries.** Google's AI overviews ('Search Generative Experience') results are most common for informational keywords, across a mix of low-volume and more general queries. ([Growth Memo](https://www.growth-memo.com/p/the-impact-of-ai-overviews-on-seo), [Semrush](https://www.semrush.com/blog/ai-overviews-study/))
+- **Don't forget about Bing.** ChatGPT search specifically [uses Bing](https://techcrunch.com/2023/06/27/openais-chatgpt-app-can-now-search-the-web-but-only-via-bing) and is believed to pull the top [~10-15 results](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3) , to then synthesize into an overview summary. (I can’t find an original source on the ‘top 10-15 results’ claim, but have seen it lots of places; if anyone knows where that claim comes from originally, would love to know).
 
 ### **How Can You Influence AI Search Results?**
 
-There’s no clear playbook. Gonto, from HyperGrowth partners and from Auth0, [summarized his considerations for AI search optimization on LinkedIn](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABvwGecBGy-5hL7k_lsLs4UK_cTDRKHHnFA).
+As we've already covered, this is evolving, and no one totally knows. Keep in mind that: 
+- The relationship between public web presence and foundation model training remains indirect.
+- Strategies that work today may need to adapt as training methodologies and AI search engines evolve.
+- Search providers themselves have provided very little direct, public info about their approaches, and there are lots of conflicting opinions out there.
 
-Here are my reflections on what stands out:
+All of that said, here are my reflections on specific actions that seem to be high value in today's AI Search context (and to broadly improve your company's digital presence and authority):
 
 - **Get included in sources AI models train on and cite.**
     - Appearing on reputable, widely cited sites (especially those known for structured, factual content) increases the likelihood of being part of AI-generated answers. Think Reddit and YouTube as good examples.
     - Studies of [which domains are most visible](https://www.growth-memo.com/p/ai-on-innovation?utm_source=publication-search) in AI Overviews can also be a helpful guide for where to focus.
 - **Focus on co-occurence**:
-    - While high-ranking pages from your own site matter, AI’s keyword and co-occurrence based process means it’s important for your brand to be often mentioned next to relevant keywords, across the web.
+    - While high-ranking pages from your own site matter, AI's keyword and co-occurrence based process means it's important for your brand to be often mentioned next to relevant keywords, across the web.
     - [This video](https://x.com/randfish/status/1886866528731283560?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1886866528731283560%7Ctwgr%5E58d9dddb9c75380f9924a34fdc24ac3aabc5e6bd%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.notion.so%2FAI-SEO-19ef6d3de0e18062a34bf111054a514a) is a great demonstration of why this is valuable. This can be [achieved through](https://www.reforge.com/guides/optimizing-for-ai-search-and-discovery) partnerships, guest blogs, posting on forums, or repurposing content across platforms.
-    - ‘PR’ and consistent brand wording are more important than ever, as is cross-posting content across multiple platforms.
+    - 'PR' and consistent brand wording are more important than ever, as is cross-posting content across multiple platforms.
 - **Avoid JavaScript-heavy content.**
     - AI models favor content they can easily parse, so important text should be in plain HTML.
-    - It’s also helpful to have structured markup, e.g. FAQ schema, that can be easily retrieved by AI models.
-    - Some companies are also experimenting with “[LLM cloaking](https://www.growth-memo.com/p/2025-predictions-and-2024-review?open=false#%C2%A7more-sites-cloak-for-llms)” (showing different content to AI models vs. human users) or adding llms.txt files to their sites to make it easier for crawlers to pull out key content in convenient formats. More tactics like this may emerge that attempt to influence what AI models prioritize, particularly during the training phase, where easy-to-parse data is a top priority.
+    - It's also helpful to have structured markup, e.g. FAQ schema, that can be easily retrieved by AI models.
+    - Some companies are also experimenting with "[LLM cloaking](https://www.growth-memo.com/p/2025-predictions-and-2024-review?open=false#%C2%A7more-sites-cloak-for-llms)" (showing different content to AI models vs. human users) or adding llms.txt files to their sites to make it easier for crawlers to pull out key content in convenient formats. More tactics like this may emerge that attempt to influence what AI models prioritize, particularly during the training phase, where easy-to-parse data is a top priority.
 - **Mentions, not just links.**
     - AI-generated search results may lead to **fewer clicks but more searches**—people might not visit individual sites as often if AI provides direct answers.
     - That means that your site being linked is not as critical for GEO as it is for SEO. Since lots of sites punish external links, total ***mentions*** on reputable sites, rather than backlinks from them, increases in importance.
-    - One caveat is that backlinks still matter - both to appearing in the top search results and to LLM training sources like WebText2 (where, for example, [GPT-3 was trained](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs) on outbound links from Reddit with 3+ upvotes) We’ll see how this evolves as more and more companies [like Astral](https://x.com/SavannahFeder/status/1877444748039819301) are manipulating Reddit to plug their brand.
-    - Here’s Brittany Muller on this topic:
-        
-        https://x.com/BritneyMuller/status/1891826247635959942
-        
+    - One caveat is that backlinks still matter - both to appearing in the top search results and to LLM training sources like WebText2 (where, for example, [GPT-3 was trained](https://www.advancedwebranking.com/blog/llm-optimization-generative-ai-outputs) on outbound links from Reddit with 3+ upvotes) We'll see how this evolves as more and more companies [like Astral](https://x.com/SavannahFeder/status/1877444748039819301) are manipulating Reddit to plug their brand.
+    - Here's Brittany Muller on this topic: <Tweet id="1891826247635959942" />
+
+To provide another set of opinions, Gonto, from HyperGrowth partners (and well-known for his marketing work at Auth0), summarized his considerations for AI search optimization on LinkedIn [here](https://www.linkedin.com/posts/mgonto_chatgpt-answers-your-queries-in-prose-google-activity-7297678886375452673-SEX3/).
 
 ### **How Will We Measure Success?**
 
-Companies will need to rethink attribution models, and how they monitor for GEO. That starts with adding AI search engines to your self-reported attribution, and making sure you’re monitoring analytics tools to see how referral traffic from AI tools is trending. 
+Companies will need to rethink attribution models, and how they monitor for GEO. That starts with adding AI search engines to your self-reported attribution, and making sure you're monitoring analytics tools to see how referral traffic from AI tools is trending. 
 
-There’s also a growing crop of 3rd party tools focused on this:
+There's also a growing crop of 3rd party tools focused on this:
 
-- **Profound**: Founded in 2024, [Profound](http://tryprofound.com) has secured $3.5 million in seed funding to pioneer AI search optimization. Key features include sentiment analysis, competitor benchmarking, and real-time performance tracking. Here’s [their TechCrunch article](https://techcrunch.com/2024/08/13/move-over-seo-profound-is-helping-brands-with-ai-search-optimization/).
+- **Profound**: Founded in 2024, [Profound](http://tryprofound.com) has secured $3.5 million in seed funding to pioneer AI search optimization. Key features include sentiment analysis, competitor benchmarking, and real-time performance tracking. Here's [their TechCrunch article](https://techcrunch.com/2024/08/13/move-over-seo-profound-is-helping-brands-with-ai-search-optimization/).
 - **Scrunch AI:** Established in 2022, [Scrunch AI](http://SCRUNCHAI.COM) raised $4 million in early-stage venture capital funding. It provides tools to evaluate brand visibility, reputation, and accuracy across AI-generated responses.
-- **AthenaHQ** – A [YCW25 company](https://www.ycombinator.com/companies/athenahq), focused on tracking brand presence across AI-generated responses, especially ChatGPT
-- **AI Search Grader (HubSpot)** – Evaluates how often a brand appears in AI-driven search ([HubSpot](https://www.hubspot.com/ai-search-grader)). This is more of a one-off view rather than an actionable monitoring tool.
+- **AthenaHQ** – A [YCW25 company](https://www.ycombinator.com/companies/athenahq), [AthenaHQ](https://www.athenahq.ai/) is focused on tracking brand presence across AI-generated responses, especially ChatGPT
+- **AI Search Grader by [HubSpot](https://www.hubspot.com/ai-search-grader)** – Evaluates how often a brand appears in AI-driven search. This is more of a one-off view rather than an actionable monitoring tool, but is an interesting (and free) at-a-glance option.
 
 There are a few other early startups in this space as well, such as [Trackerly](https://trackerly.ai/), or even AI-search focused marketing agencies like [Virayo](https://www.virayo.com/).
 
-I’ll be interested to see if these companies take root, or if (1) the traditional SEO giants like Ahrefs fold these types of capabilities into their platforms; or (2) ‘Brand Monitoring’ tools like sprout social move into this field, since this is a form of brand visibility. 
+I'll be interested to see if these companies take root, or if (1) the traditional SEO giants like Ahrefs fold these types of capabilities into their platforms; or (2) 'Brand Monitoring' tools like Sprout Social move into this field, since this is a form of brand visibility. 
 
-It’s early, so we’ll have to see what abbreviation (and what startups!) end up winning in this space in the long-run.
+It's early, so we'll have to see what abbreviation (and what startups!) end up winning in this space in the long-run.
 
 ### **Final Thoughts**
 
 The biggest takeaway is that search is shifting in a way that prioritizes AI-curated responses over direct website visits. Instead of optimizing for page rankings, the goal might be to make sure your content is present where AI is pulling from and is mentioned positively across a range of trusted sites. 
 
-If you have other thoughts or tactical ideas, I would love to hear them - don’t hesitate to [drop me a note](mailto:mbcrosier.com)!
+If you have other thoughts or tactical ideas, I would love to hear them - don't hesitate to [drop me a note](mailto:mbcrosier.com)!

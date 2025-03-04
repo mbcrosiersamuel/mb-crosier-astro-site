@@ -12,50 +12,47 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
   day: 'numeric'
 }).format(pubDate);
 
+// Get the full URLs for images
+const siteUrl = Astro.site || 'https://mbcrosier.com';
+// If frontmatter has an image.url, use that, otherwise fall back to default
+const defaultImage = new URL('/favicon.svg', siteUrl).toString();
+const pageImage = frontmatter.image?.url 
+  ? new URL(frontmatter.image.url, siteUrl).toString()
+  : defaultImage;
+
+// Use the page image for all social sharing unless specifically overridden
+const socialImage = frontmatter.socialImage 
+  ? new URL(frontmatter.socialImage, siteUrl).toString()
+  : pageImage;
+const ogImage = frontmatter.ogImage 
+  ? new URL(frontmatter.ogImage, siteUrl).toString()
+  : socialImage;
+const twitterImage = frontmatter.twitterImage 
+  ? new URL(frontmatter.twitterImage, siteUrl).toString()
+  : socialImage;
+
 // Create the JSON-LD structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": frontmatter.title,
   "description": frontmatter.description,
-  "image": frontmatter.image?.url ? new URL(frontmatter.image.url, Astro.site) : null,
+  "image": pageImage,
   "datePublished": frontmatter.pubDate,
   "author": {
     "@type": "Person",
     "name": frontmatter.author
   }
 };
-
-// Get the image to use for social sharing
-const socialImage = frontmatter.socialImage || "/abstract-swirl.png";
-const ogImage = frontmatter.ogImage || "/abstract-swirl.png";
-const twitterImage = frontmatter.twitterImage || "/abstract-swirl.png";
 ---
 <BaseLayout 
   pageTitle={frontmatter.title}
   description={frontmatter.description}
-  image={frontmatter.image}
   type="article"
+  socialImage={socialImage}
+  ogImage={ogImage}
+  twitterImage={twitterImage}
 >
-    <head>
-        <!-- Existing meta tags -->
-        
-        <!-- OpenGraph / Facebook -->
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:description" content={frontmatter.description} />
-        <meta property="og:image" content={ogImage} />
-        
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={frontmatter.title} />
-        <meta name="twitter:description" content={frontmatter.description} />
-        <meta name="twitter:image" content={twitterImage} />
-        
-        <!-- iOS/Safari sharing -->
-        <meta name="apple-mobile-web-app-title" content={frontmatter.title} />
-        <link rel="apple-touch-icon" href={socialImage} />
-    </head>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <article class="blog-post">
         <header>

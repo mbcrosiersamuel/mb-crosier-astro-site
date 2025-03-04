@@ -13,57 +13,141 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 }).format(pubDate);
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <br>
-    <h1>{frontmatter.title}</h1>
-    <h3>{formattedDate}</h3>
-    <hr class="dotted">
+    <article class="blog-post">
+        <header>
+            <h1>{frontmatter.title}</h1>
+            <h3>{formattedDate}</h3>
+            <hr class="dotted">
+        </header>
 
-    <!---
-
-    Uncomment this to bring back tags
-
-    <div class="tags">
-        {frontmatter.tags.map((tag) => (
-          <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-        ))}
-      </div> 
-      -->
-    <slot />
+        <div class="content">
+            <slot />
+        </div>
+    </article>
 </BaseLayout>
+
 <style>
-    a {
-      color: #00539F;
+    .blog-post {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    header {
+        margin-bottom: 2rem;
     }
 
     h1, h3 {
-      text-align: center;
+        text-align: center;
     }
 
-    h1{
-      margin-bottom: 6px;
+    h1 {
+        margin-bottom: 0.5rem;
     }
-  
+
+    h3 {
+        font-size: 16px;
+        margin: 0;
+        color: #666;
+    }
+
+    .content {
+        line-height: 1.6;
+    }
+
+    .content :global(h2) {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .content :global(p) {
+        margin-bottom: 1.2rem;
+    }
+
+    .content :global(ul), 
+    .content :global(ol) {
+        margin-bottom: 1.2rem;
+        padding-left: 1.5rem;
+    }
+
+    .content :global(li) {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Add styles for nested lists */
+    .content :global(li > ul),
+    .content :global(li > ol) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Improve readability with max line length */
+    .content :global(p),
+    .content :global(li) {
+        max-width: 70ch;
+        line-height: 1.7;
+    }
+
+    /* Make headings more prominent */
+    .content :global(h2) {
+        font-size: 1.75rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content :global(h3) {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: #2c3e50;
+    }
+
+    /* Improve emphasis styling */
+    .content :global(strong) {
+        color: #2c3e50;
+    }
+
+    /* Add subtle section dividers */
+    .content :global(h2) {
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    .content :global(blockquote) {
+        border-left: 4px solid #ddd;
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+        color: #666;
+    }
+
+    hr.dotted {
+        border: none;
+        border-top: 2px dotted #ccc;
+        margin: 1.5rem 0;
+    }
+
     .tags {
-      display: flex;
-      flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0;
     }
-  
+
     .tag {
-      margin: 4px 4px 4px 0px;
-      border: dotted 1px #83c5be;
-      border-radius: 8px;
-      padding: 4px 8px;
-      font-size: 16px;
-      background-color: #F0F3BD;
+        margin: 0;
+        border: dotted 1px #83c5be;
+        border-radius: 8px;
+        padding: 4px 8px;
+        font-size: 16px;
+        background-color: #F0F3BD;
     }
 
-    h3{
-      font-size: 16px;
-      margin: 0px;
+    a {
+        color: #00539F;
+        text-decoration: none;
     }
 
-    .post-date{
-      color: #28241C;
+    a:hover {
+        text-decoration: underline;
     }
-    
-  </style>
+</style>

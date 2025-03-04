@@ -1,0 +1,20 @@
+---
+const { url } = Astro.props;
+---
+
+<div class="linkedin-embed">
+  <iframe
+    src={`https://www.linkedin.com/embed/feed/update/${url}`}
+    height="570"
+    width="100%"
+    frameborder="0"
+    allowfullscreen=""
+    title="Embedded LinkedIn Post"
+  ></iframe>
+</div>
+
+<style>
+  .linkedin-embed {
+    margin: 2rem 0;
+  }
+</style> 

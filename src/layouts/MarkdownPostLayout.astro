@@ -25,6 +25,11 @@ const jsonLd = {
     "name": frontmatter.author
   }
 };
+
+// Get the image to use for social sharing
+const socialImage = frontmatter.socialImage || "/abstract-swirl.png";
+const ogImage = frontmatter.ogImage || "/abstract-swirl.png";
+const twitterImage = frontmatter.twitterImage || "/abstract-swirl.png";
 ---
 <BaseLayout 
   pageTitle={frontmatter.title}
@@ -32,6 +37,25 @@ const jsonLd = {
   image={frontmatter.image}
   type="article"
 >
+    <head>
+        <!-- Existing meta tags -->
+        
+        <!-- OpenGraph / Facebook -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.description} />
+        <meta property="og:image" content={ogImage} />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta name="twitter:description" content={frontmatter.description} />
+        <meta name="twitter:image" content={twitterImage} />
+        
+        <!-- iOS/Safari sharing -->
+        <meta name="apple-mobile-web-app-title" content={frontmatter.title} />
+        <link rel="apple-touch-icon" href={socialImage} />
+    </head>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <article class="blog-post">
         <header>

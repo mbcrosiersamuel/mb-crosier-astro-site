@@ -1,0 +1,54 @@
+---
+interface Props {
+    url: string;
+    showParent?: boolean;
+    showMedia?: boolean;
+    theme?: 'light' | 'dark';
+    width?: string | number;
+}
+
+const { 
+    url, 
+    showParent = false, 
+    showMedia = true, 
+    theme = 'light',
+    width = '100%'
+} = Astro.props;
+---
+
+<div class="reddit-embed-container" style={`width: ${width};`}>
+    <blockquote 
+        class="reddit-embed-bq" 
+        data-embed-showmedia={showMedia.toString()}
+        data-embed-showparent={showParent.toString()}
+        data-embed-theme={theme}
+    >
+        <a href={url}>View on Reddit</a>
+    </blockquote>
+</div>
+
+<style>
+    .reddit-embed-container {
+        margin: 1.5rem auto;
+        max-width: 800px;
+    }
+    
+    .reddit-embed-bq {
+        background: #f8f9fa;
+        border-left: 4px solid #ff4500;
+        margin: 0;
+        padding: 1rem;
+    }
+</style>
+
+<script>
+    // Initialize Reddit embeds when the component mounts
+    window.addEventListener('load', function() {
+        // Create script element for Reddit SDK
+        const script = document.createElement('script');
+        script.src = 'https://embed.reddit.com/widgets.js';
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+    });
+</script> 

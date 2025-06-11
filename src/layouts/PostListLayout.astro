@@ -1,23 +1,34 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
 const { pageTitle } = Astro.props;
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
 const filteredPosts = allPosts.filter(
-    (post) => post.frontmatter.type === pageTitle).sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
+    (post) => post.frontmatter.type === pageTitle).sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate).getTime();
+  const dateB = new Date(b.frontmatter.pubDate).getTime();
+  return dateB - dateA;
+});
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <br />
     <br />
     {
-        filteredPosts.map((post) => (
-            <BlogPost
-                url={post.url}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-            />
-        ))
+        filteredPosts.map((post) => {
+          const pubDate = new Date(post.frontmatter.pubDate);
+          const formattedDate = pubDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+          return (
+            <div class="post-list-item">
+              <a href={post.url} class="post-link">{post.frontmatter.title}</a>
+              <div class="post-date">{formattedDate}</div>
+              <p class="post-description">{post.frontmatter.description}</p>
+            </div>
+          );
+        })
     }
 </BaseLayout>
 
@@ -32,5 +43,29 @@ const filteredPosts = allPosts.filter(
 
     p {
         margin-top: 3px;
+    }
+    .post-link {
+      font-size: 1.08em;
+      color: #127399;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 0px;
+      display: inline-block;
+    }
+    .post-link:hover {
+      text-decoration: underline;
+    }
+    .post-date {
+      color: #888;
+      font-size: 0.95em;
+      margin: 0px 0 2px 2px;
+    }
+    .post-description {
+      margin: 0 0 30px 0;
+      font-size: 1em;
+      color: #2c2c2c;
+    }
+    .post-list-item {
+      margin-bottom: 1.1em;
     }
 </style>

@@ -1,7 +1,16 @@
 ---
-const { url, title, description } = Astro.props;
+const { url, title, description, pubDate } = Astro.props;
 ---
 <a href={url} class="post-link">{title}</a>
+{pubDate && (
+  <div class="post-date">
+    {new Date(pubDate).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })}
+  </div>
+)}
 <p class="post-description">{description}</p>
 
 
@@ -9,6 +18,12 @@ const { url, title, description } = Astro.props;
 
 <style>
  .post-link{
+ }
+
+ .post-date {
+    color: #888;
+    font-size: 0.98em;
+    margin: 4px 0 8px 2px;
  }
 
  .post-description{

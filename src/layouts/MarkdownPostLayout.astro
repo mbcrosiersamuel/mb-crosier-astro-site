@@ -15,7 +15,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 // Get the full URLs for images
 const siteUrl = Astro.site || 'https://mbcrosier.com';
 // If frontmatter has an image.url, use that, otherwise fall back to default
-const defaultImage = new URL('/favicon.svg', siteUrl).toString();
+const defaultImage = new URL('/favicon.png', siteUrl).toString();
 const pageImage = frontmatter.image?.url 
   ? new URL(frontmatter.image.url, siteUrl).toString()
   : defaultImage;
@@ -30,6 +30,9 @@ const ogImage = frontmatter.ogImage
 const twitterImage = frontmatter.twitterImage 
   ? new URL(frontmatter.twitterImage, siteUrl).toString()
   : socialImage;
+
+// Get alt text for the image
+const imageAlt = frontmatter.image?.alt || 'MB Crosier favicon';
 
 // Create the JSON-LD structured data
 const jsonLd = {
@@ -52,6 +55,7 @@ const jsonLd = {
   socialImage={socialImage}
   ogImage={ogImage}
   twitterImage={twitterImage}
+  imageAlt={imageAlt}
 >
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <article class="blog-post">

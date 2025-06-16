@@ -74,6 +74,64 @@ const jsonLd = {
         padding: 2rem 1rem;
     }
 
+    @media (max-width: 600px) {
+        .blog-post {
+            padding: 0.5rem 0;
+        }
+        .content {
+            padding: 0 0.05rem;
+        }
+        .content :global(div[style*='display: flex']) {
+            flex-direction: column !important;
+            gap: 4px !important;
+            align-items: stretch !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .content :global(div[style*='display: flex'] figure) {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .content :global(div[style*='display: flex'] img) {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        .content :global(div[style*='display: flex'] figcaption) {
+            margin: 4px 0 0 0 !important;
+        }
+    }
+
+    .content :global(div[style*='display: flex']) {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .content :global(div[style*='display: flex'] figure) {
+        margin: 0 0.2rem !important;
+        padding: 0 !important;
+    }
+    .content :global(div[style*='display: flex'] figcaption) {
+        margin-top: 4px;
+        font-size: 0.95em;
+        color: #666;
+    }
+    .content :global(div[style*='display: flex'] img) {
+        margin: 0 auto !important;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+    .content :global(figure) {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .content :global(img) {
+        margin: 0.5rem auto !important;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
     header {
         margin-bottom: 2rem;
     }

@@ -15,7 +15,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 // Get the full URLs for images
 const siteUrl = Astro.site || 'https://mbcrosier.com';
 // If frontmatter has an image.url, use that, otherwise fall back to default
-const defaultImage = new URL('/favicon.png', siteUrl).toString();
+const defaultImage = new URL('/abstract-swirl.png', siteUrl).toString();
 const pageImage = frontmatter.image?.url 
   ? new URL(frontmatter.image.url, siteUrl).toString()
   : defaultImage;
@@ -32,7 +32,7 @@ const twitterImage = frontmatter.twitterImage
   : socialImage;
 
 // Get alt text for the image
-const imageAlt = frontmatter.image?.alt || 'MB Crosier favicon';
+const imageAlt = frontmatter.image?.alt || 'Abstract swirl in blue and yellow';
 
 // Create the JSON-LD structured data
 const jsonLd = {

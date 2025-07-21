@@ -11,7 +11,9 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
+    imageService: true,
+    devImageService: 'sharp'
   }),
   site: 'https://mbcrosier.com',
-  sitemap: true,
+  sitemap: true
 });

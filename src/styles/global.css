@@ -16,19 +16,26 @@ body {
   /*color: #0e1111;*/
 }
 
-
 h1 {
   color: #05668D;
   line-height: 120%;
   font-size: 28px;
 }
 
-h2{
+h2 {
   color: #028090;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
-h3{
+h3 {
   color: #00A896;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 hr.dotted {
@@ -41,14 +48,12 @@ hr.dotted {
 }
 
 /* nav styles */
-
-a{
+a {
   color: #05668D;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
 }
-
 
 .nav-links {
   display: inline-block;
@@ -65,7 +70,6 @@ a{
   font-weight: bold;
   line-height: 150%;
   margin: 10px 10px;
-
 }
 
 .nav-links a:hover,
@@ -74,7 +78,6 @@ a{
 } 
 
 /* footer styles */
-
 body::after {
   content: '';
   display: block;
@@ -100,18 +103,85 @@ body::after {
 .footer i:hover,
 .footer i:focus {
   color: #028090;
-
 }
 
-li{
+/* Content styles */
+p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+li {
   padding: 3px 0px;
+  line-height: 1.7;
+  max-width: 70ch;
 }
 
-img{
-  display:flex;
+img {
+  display: block;
   max-width: 100%;
   height: auto;
-  justify-content: center;
+  margin: 1.5rem auto;
   border: 1px solid lightgray;
-  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* MDX specific styles */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+  color: #666;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Flex container styles */
+div[style*="display: flex"] {
+  gap: 16px;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  div[style*="display: flex"] img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }

@@ -57,200 +57,155 @@ const jsonLd = {
   twitterImage={twitterImage}
   imageAlt={imageAlt}
 >
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    <article class="blog-post">
-        <header>
-            <h1>{frontmatter.title}</h1>
-            <h3>{formattedDate}</h3>
-            <hr class="dotted">
-        </header>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="blog-post">
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <h3>{formattedDate}</h3>
+      <hr class="dotted">
+    </header>
 
-        <div class="content">
-            <slot />
-        </div>
-    </article>
+    <div class="content">
+      <slot />
+    </div>
+  </article>
 </BaseLayout>
 
 <style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #666;
+    font-weight: normal;
+  }
+
+  .content {
+    line-height: 1.6;
+  }
+
+  .content :global(h2) {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #028090;
+  }
+
+  .content :global(h3) {
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color: #00A896;
+  }
+
+  .content :global(p) {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin: 1.2rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .content :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .content :global(li > ul),
+  .content :global(li > ol) {
+    margin: 0.5rem 0;
+  }
+
+  .content :global(img) {
+    margin: 1.5rem auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+
+  .content :global(figure) {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .content :global(figcaption) {
+    margin-top: 0.5rem;
+    font-size: 0.95em;
+    color: #666;
+  }
+
+  .content :global(blockquote) {
+    border-left: 4px solid #ddd;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  .content :global(code) {
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  .content :global(pre) {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .content :global(pre code) {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .content :global(div[style*="display: flex"]) {
+    gap: 16px;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
     .blog-post {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-    }
-
-    @media (max-width: 600px) {
-        .blog-post {
-            padding: 0.5rem 0;
-        }
-        .content {
-            padding: 0 0.05rem;
-        }
-        .content :global(div[style*='display: flex']) {
-            flex-direction: column !important;
-            gap: 4px !important;
-            align-items: stretch !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        .content :global(div[style*='display: flex'] figure) {
-            max-width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        .content :global(div[style*='display: flex'] img) {
-            max-width: 100% !important;
-            width: 100% !important;
-            margin: 0 !important;
-        }
-        .content :global(div[style*='display: flex'] figcaption) {
-            margin: 4px 0 0 0 !important;
-        }
-    }
-
-    .content :global(div[style*='display: flex']) {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .content :global(div[style*='display: flex'] figure) {
-        margin: 0 0.2rem !important;
-        padding: 0 !important;
-    }
-    .content :global(div[style*='display: flex'] figcaption) {
-        margin-top: 4px;
-        font-size: 0.95em;
-        color: #666;
-    }
-    .content :global(div[style*='display: flex'] img) {
-        margin: 0 auto !important;
-        border-radius: 8px;
-        border: 1px solid #eee;
-    }
-    .content :global(figure) {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .content :global(img) {
-        margin: 0.5rem auto !important;
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
-
-    header {
-        margin-bottom: 2rem;
-    }
-
-    h1, h3 {
-        text-align: center;
+      padding: 1rem 0.5rem;
     }
 
     h1 {
-        margin-bottom: 0.5rem;
+      font-size: 2rem;
     }
 
-    h3 {
-        font-size: 16px;
-        margin: 0;
-        color: #666;
+    .content :global(div[style*="display: flex"]) {
+      flex-direction: column !important;
+      gap: 1rem !important;
     }
 
-    .content {
-        line-height: 1.6;
+    .content :global(div[style*="display: flex"] img) {
+      width: 100% !important;
+      max-width: 100% !important;
     }
-
-    .content :global(h2) {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .content :global(p) {
-        margin-bottom: 1.2rem;
-    }
-
-    .content :global(ul), 
-    .content :global(ol) {
-        margin-bottom: 1.2rem;
-        padding-left: 1.5rem;
-    }
-
-    .content :global(li) {
-        margin-bottom: 0.5rem;
-    }
-
-    /* Add styles for nested lists */
-    .content :global(li > ul),
-    .content :global(li > ol) {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Improve readability with max line length */
-    .content :global(p),
-    .content :global(li) {
-        max-width: 70ch;
-        line-height: 1.7;
-    }
-
-    /* Make headings more prominent */
-    .content :global(h2) {
-        font-size: 1.75rem;
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .content :global(h3) {
-        font-size: 1.4rem;
-        margin-top: 2.5rem;
-        margin-bottom: 1.2rem;
-        color: #2c3e50;
-    }
-
-    /* Improve emphasis styling */
-    .content :global(strong) {
-        color: #2c3e50;
-    }
-
-    /* Add subtle section dividers */
-    .content :global(h2) {
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
-    }
-
-    .content :global(blockquote) {
-        border-left: 4px solid #ddd;
-        margin: 1.5rem 0;
-        padding-left: 1rem;
-        color: #666;
-    }
-
-    hr.dotted {
-        border: none;
-        border-top: 2px dotted #ccc;
-        margin: 1.5rem 0;
-    }
-
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin: 1rem 0;
-    }
-
-    .tag {
-        margin: 0;
-        border: dotted 1px #83c5be;
-        border-radius: 8px;
-        padding: 4px 8px;
-        font-size: 16px;
-        background-color: #F0F3BD;
-    }
-
-    a {
-        color: #00539F;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
+  }
 </style>

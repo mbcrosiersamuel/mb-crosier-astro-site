@@ -1,4 +1,18 @@
 {
   "version": 2,
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://mbsamuel.com/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "mbcrosier.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://mbsamuel.com/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "www.mbcrosier.com" }]
+    }
+  ]
 } 
